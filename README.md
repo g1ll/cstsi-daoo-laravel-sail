@@ -1,3 +1,78 @@
+# CSTSI DAOO Laravel Sail (Docker)
+
+## LINUX
+
+
+## WINDOWS
+
+### Instalação do Docker
+
+
+### WSL com Ubuntu 22.04
+
+
+### Configurando o Docker no WSL
+
+
+
+### Comandos de instalação do PHP no Ubuntu WSL
+
+Configuração do PPA para php 8.2:`
+
+```bash
+sudo add-apt-repository ppa:ondrej/php
+```
+
+Instalação do php8.2 e dependências comuns
+```bash
+sudo apt install -y php8.2 php8.2-cli php8.2-common php8.2-fpm php8.2-mysql php8.2-zip php8.2-gd php8.2-mbstring php8.2-curl php8.2-xml php8.2-bcmath
+```
+
+Instalar o composer no ubuntu wsl:
+Seguir passos do site para linux/mac na seção "Command-line Installation"
+
+[Instalação Composer Linux/Max](https://getcomposer.org/download/)
+
+Após, rodar o comando seguinte:
+
+```bash
+sudo mv composer.phar /usr/local/bin/composer
+```
+
+Vereificar se o composer já está funcionando:
+
+```bash
+composer -V
+```
+
+### Docker
+Com o docker configurado, verifique se ele está rodando no wsl:
+
+```bash
+docker --version
+```
+
+Clone o repositório e entre na pasta do projeto
+
+```bash
+git clone https://github.com/g1ll/cstsi-daoo-laravel-sail.git
+```
+
+Execute o comando para instalar as dependências do composer.
+
+```bash
+composer i
+```
+
+Após instalar as dependências e criar a pasta vendor, execute o sail para instânciar os containers do docker-composer.yml
+
+```bash
+./vendor/bin/sail up
+
+```
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
